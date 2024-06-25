@@ -1,0 +1,35 @@
+###
+POST http://127.0.0.1:8000/api/v1/auth/register
+content-type: application/json
+Accept: application/json
+
+{
+    "userID": 1032,
+    "password": "camille"
+}
+
+###
+POST http://127.0.0.1:8000/api/v1/auth/login
+content-type: application/json
+Accept: application/json
+
+{
+    "userID": 1037,
+    "password": "password123"
+}
+
+###
+POST http://127.0.0.1:8000/api/v1/auth/logout
+Authorization: Bearer 63|xGUwRS7xHYWYOkZWtxtMqx0SsokJdquBKtffThcdcdd47f94
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/api/v1/assign-role
+Authorization: Bearer 1|bwDyof8BL3yGme8zCKY4LPCUNlP2EydEC2pOV6f861956f7f
+Accept: application/json
+content-type: application/json
+
+{
+    "userID": 1032,
+    "role_name" : "Faculty"
+}

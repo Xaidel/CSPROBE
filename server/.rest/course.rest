@@ -1,0 +1,34 @@
+###
+GET http://127.0.0.1:8000/api/v1/course
+Authorization: Bearer 3|rpLcNwvrtkKCsvdhKH9YCevrxKOalfWETxF0supG7b8daba7
+Accept: application/json
+
+
+###
+POST http://127.0.0.1:8000/api/v1/course
+Authorization: Bearer 3|rpLcNwvrtkKCsvdhKH9YCevrxKOalfWETxF0supG7b8daba7
+content-type: application/json
+Accept: application/json
+
+{
+    "name" : "GE Filipino 2",
+    "unit" : 3,
+    "hours" : 3
+}
+
+###
+PUT http://127.0.0.1:8000/api/v1/course/4
+Authorization: Bearer 3|rpLcNwvrtkKCsvdhKH9YCevrxKOalfWETxF0supG7b8daba7
+content-type: application/json
+Accept: application/json
+
+{
+    "name" : "GE Filipino 1",
+    "unit" : 3,
+    "hours" : 3
+}
+
+###
+DELETE http://127.0.0.1:8000/api/v1/course/1
+Authorization: Bearer 3|rpLcNwvrtkKCsvdhKH9YCevrxKOalfWETxF0supG7b8daba7
+Accept: application/json

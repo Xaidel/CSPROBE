@@ -1,0 +1,34 @@
+###
+GET http://127.0.0.1:8000/api/v1/performance-indicator
+Authorization: Bearer 1|p6d4TxvX3Lshd22i4AddbWNvh8XgyEg1LnqfhkWk431c2b04
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/api/v1/performance-indicator
+Authorization: Bearer 3|rpLcNwvrtkKCsvdhKH9YCevrxKOalfWETxF0supG7b8daba7
+content-type: application/json
+Accept: application/json
+
+{
+    "pi_desc" : "sample test performance indicator first ",
+    "po_id" : 1,
+    "course_id" : 4
+}
+
+###
+PUT http://127.0.0.1:8000/api/v1/performance-indicator/1
+Authorization: Bearer 1|wAKVkDgeJp8HLi0z4anZZpSaLM74Ka2ECMfbqt6f88fff867
+content-type: application/json
+Accept: application/json
+
+{
+    "pi_desc" : "Test",
+    "po_id": 1,
+    "course_id": 1
+}
+
+###
+DELETE http://127.0.0.1:8000/api/v1/performance-indicator/1
+Authorization: Bearer 1|wAKVkDgeJp8HLi0z4anZZpSaLM74Ka2ECMfbqt6f88fff867
+content-type: application/json
+Accept: application/json

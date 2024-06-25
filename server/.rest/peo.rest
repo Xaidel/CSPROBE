@@ -1,0 +1,30 @@
+###
+GET http://127.0.0.1:8000/api/v1/peo
+Accept: application/json
+Authorization: Bearer 1|C7C6W4BhI1UYkWWSZxE8oD5NrrHSILdy9ll3Lq5rb85809e0
+###
+POST http://127.0.0.1:8000/api/v1/peo
+content-type: application/json
+Authorization: Bearer 9|9F6KS7W6tHqEF7kz13WrjLRg5q6pfipbc04csleu700fa43c
+Accept: application/json
+
+{
+    "peo_desc" : "sample_peo",
+    "program_id" : 1
+}
+
+###
+PUT http://127.0.0.1:8000/api/v1/peo/1
+content-type: application/json
+Authorization: Bearer 1|52xW1FNAkFoIsSUvoiUQHwLXnNUe1LjLr6SLyFKn659e3e47
+Accept: application/json
+
+{
+    "peo_desc" : "This is the first Program Educational Objectives",
+    "program_id" : 1
+}
+
+###
+DELETE http://127.0.0.1:8000/api/v1/peo/1
+Authorization: Bearer 1|52xW1FNAkFoIsSUvoiUQHwLXnNUe1LjLr6SLyFKn659e3e47
+Accept: application/json

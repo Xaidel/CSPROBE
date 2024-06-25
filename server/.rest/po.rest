@@ -1,0 +1,31 @@
+###
+GET http://127.0.0.1:8000/api/v1/program-outcome
+Authorization: Bearer 13|FehBLUh0RHGt4Apr5g4aKZcXA1gt2IMikaPkAoEZ4f5dff21
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/api/v1/program-outcome
+Authorization: Bearer 8|B0bvM8Y97WCiCq8UGorntn8FYIuGe4vP5k3uF0th7b241fcf
+content-type: application/json
+Accept: application/json
+
+{
+    "po_desc" : "Program Test",
+    "program_id": 1
+}
+
+###
+PUT http://127.0.0.1:8000/api/v1/program-outcome/2
+Authorization: Bearer 1|u4TwxCCPOZ60JzUdZlmd2PXQK2O6xj8ikpxOD6Q2bd842a5d
+content-type: application/json
+Accept: application/json
+
+{
+    "po_desc": "Program Test",
+    "program_id": 2
+}
+
+###
+DELETE http://127.0.0.1:8000/api/v1/program-outcome/1
+Authorization: Bearer 7|em3EZnxSEUVgcSqsSEn8gPQzxtv2AGg8gfil7d58a97c328d
+Accept: application/json

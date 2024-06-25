@@ -1,0 +1,29 @@
+###
+GET http://127.0.0.1:8000/api/v1/assessment-tool
+Authorization: Bearer 4|GwaOb7BiRoxZbzTu0FcGJutiKxa8rWNKUzWPsjEn1f54771d
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/api/v1/assessment-tool
+Authorization: Bearer 1|J5mJIG4VpWqImixP9n2WciX3zeEtnRYnUbjk69i3be3f270e
+content-type: application/json
+Accept: application/json
+
+{
+    "tool" : "CP Proposal"
+}
+
+###
+PUT http://127.0.0.1:8000/api/v1/assessment-tool/1
+Authorization: Bearer 1|J5mJIG4VpWqImixP9n2WciX3zeEtnRYnUbjk69i3be3f270e
+content-type: application/json
+Accept: application/json
+
+{
+    "tool" : "System Development Plan"
+}
+
+###
+DELETE http://127.0.0.1:8000/api/v1/assessment-tool/1
+Authorization: Bearer 1|J5mJIG4VpWqImixP9n2WciX3zeEtnRYnUbjk69i3be3f270e
+Accept: application/json

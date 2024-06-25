@@ -1,0 +1,32 @@
+###
+GET http://127.0.0.1:8000/api/v1/program
+Accept: application/json
+Authorization: Bearer 106|KPRS8R2DmUqHtDFKpPtiQ1qwTmKNoKIK3ZU7Zw1O164f94ee
+
+POST http://127.0.0.1:8000/api/v1/program
+content-type: application/json
+Authorization: Bearer 1|UAFLiQDR6S769yVDiyKMkXPXYL5m4SpzV0RExqHidfd24429
+Accept: application/json
+
+{
+    "program_code" : "BSCS",
+    "program_description" : "Bachelor of Science in Computer Science",
+    "department_id" : 1
+}
+
+###
+PUT http://127.0.0.1:8000/api/v1/program/
+content-type: application/json
+Authorization: Bearer 37|5szRufJt119PDMp7RMqPKPHFEEJ2z6S0J5HGoroR8674f8fe
+Accept: application/json
+
+{
+    "program_code" : "BSIT",
+    "program_description" : "Bachelor of Information Technology",
+    "department_id" : 1
+}
+
+###
+DELETE http://127.0.0.1:8000/api/v1/program/BSIT
+Accept: application/json
+Authorization: Bearer 37|5szRufJt119PDMp7RMqPKPHFEEJ2z6S0J5HGoroR8674f8fe
