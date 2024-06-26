@@ -1,7 +1,7 @@
 ###
-GET http://127.0.0.1:8000/api/v1/program
+GET http://127.0.0.1:8000/api/v1/program 
 Accept: application/json
-Authorization: Bearer 106|KPRS8R2DmUqHtDFKpPtiQ1qwTmKNoKIK3ZU7Zw1O164f94ee
+Authorization: Bearer 93|4VPvBEJO4NKyT8aJkVIjF8cLpVMh24J49E99jI1n0b76e254
 
 POST http://127.0.0.1:8000/api/v1/program
 content-type: application/json

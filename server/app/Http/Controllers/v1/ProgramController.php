@@ -15,7 +15,7 @@ class ProgramController extends Controller
      */
     public function index()
     {
-        return ProgramResource::collection(Program::with('department')->get());
+        return ProgramResource::collection(Program::all());
     }
 
 

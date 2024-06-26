@@ -42,6 +42,14 @@ const GlobalStyles = createGlobalStyle`
       rgba(71, 69, 72, 1) 80%
     );
 
+    /* Gradient */
+--gradient-color-1: linear-gradient(
+    90deg,
+    rgba(249, 110, 57, 1) 100%,
+    rgba(255, 255, 255, 1) 0%
+);
+
+
     /* Green */
     --color-green-0: #E0F2D8;
     --color-green-1: #438544;
