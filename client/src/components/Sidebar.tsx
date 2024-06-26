@@ -12,10 +12,17 @@ const StyledSidebar = styled.header`
     gap 3.2rem;
 `;
 
+const Space = styled.div`
+    margin: 1.5rem 0rem;
+`;
+
+
+
 const Sidebar: React.FC = () => {
     return (
         <StyledSidebar>
             <Logo imageSize={9.6}/>
+            <Space/>
             <MainNav/>
             <BottomNav/>
         </StyledSidebar>

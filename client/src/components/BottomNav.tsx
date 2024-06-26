@@ -69,10 +69,12 @@ const StyledNavLink = styled(NavLink)`
 
 const BottomNav: React.FC = () => {
   const { logout } = useLogout();
+
   const handleLogout = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     e.preventDefault();
     logout();
   }
+  
   return (
     <BottomNavContainer>
       <nav>

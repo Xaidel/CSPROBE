@@ -2,7 +2,7 @@
 
 const Programs:React.FC = () => {
     return (
-        <div>Hello World</div>
+        <div>Module ni Karl</div>
     );
 }
 

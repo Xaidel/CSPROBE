@@ -11,6 +11,8 @@ import GlobalStyles from "./styles/GlobalStyles";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AppLayout from "./components/AppLayout";
 import Programs from "./pages/Programs";
+import CurriculumData from "./pages/CurriculumData";
+import StudentPortfolio from "./pages/StudentPortfolio";
 
 
 function App() {
@@ -46,6 +48,9 @@ function App() {
           >
           <Route index element={<Navigate replace to="programs"/>}/>
           <Route element={<Programs/>} path="programs"/>
+          <Route element={<CurriculumData/>} path="curriculum-data"/>
+          <Route element={<StudentPortfolio/>} path="student-portfolio"/>
+          
           </Route>
           
           <Route path="login" element={<Login />}/>

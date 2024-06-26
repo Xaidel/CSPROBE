@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { PiSquaresFourBold } from "react-icons/pi";
-import { BsBuildingGear } from "react-icons/bs";
+import { PiSquaresFourBold, PiStudent } from "react-icons/pi";
+import { IoAnalyticsSharp } from "react-icons/io5";
 
 const NavList = styled.ul`
   display: flex;
@@ -64,10 +64,18 @@ const MainNav: React.FC = () => {
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to="/program-curriculum-record">
-            <BsBuildingGear />
+          <StyledNavLink to="/curriculum-data">
+            <IoAnalyticsSharp />
             <span>
-              Program <br /> Curriculum Record
+              Curriculum Data
+            </span>
+          </StyledNavLink>
+        </li>
+        <li>
+          <StyledNavLink to="/student-portfolio">
+            <PiStudent />
+            <span>
+              Student Portfolio
             </span>
           </StyledNavLink>
         </li>

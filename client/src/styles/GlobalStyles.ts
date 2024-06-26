@@ -43,11 +43,7 @@ const GlobalStyles = createGlobalStyle`
     );
 
     /* Gradient */
---gradient-color-1: linear-gradient(
-    90deg,
-    rgba(249, 110, 57, 1) 100%,
-    rgba(255, 255, 255, 1) 0%
-);
+--gradient-color-1: linear-gradient(100deg, #CF4009 14%, #FFFFFF45 68%);
 
 
     /* Green */
