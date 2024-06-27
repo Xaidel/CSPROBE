@@ -9,7 +9,7 @@ export function useLogout(){
     const token = queryClient.getQueryData(["api-token"]);
     const {mutate: logout, isPending } = useMutation({
         mutationFn: async () => {
-            const res = client.logout(token);
+            const res = await client.logout(token);
             return res;
         },
         onSettled: () => {

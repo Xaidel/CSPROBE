@@ -34,7 +34,7 @@ const StyledNavLink = styled(NavLink)`
 
   &:hover,
   &:active {
-    background-color: var(--color-gray-1);
+    background-color: var(--color-white-1);
     border-radius: var(--border-radius-sm);
   }
 

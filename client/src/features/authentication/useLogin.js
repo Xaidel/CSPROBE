@@ -19,7 +19,6 @@ export function useLogin(){
             if(user){
                 queryClient.setQueryData(["current-user"], currentUser);
                 queryClient.setQueryData(["api-token"], currentUser.token);
-                console.log(queryClient.getQueryData(["api-token"]));
                 navigate("/programs");
             }
             if(!user) toast.error("Username or password is incorrect");

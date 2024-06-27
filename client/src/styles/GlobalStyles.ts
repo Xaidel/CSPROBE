@@ -4,10 +4,7 @@ const GlobalStyles = createGlobalStyle`
 
 :root {
 
-  @font-face{
-    font-family: 'Poppins';
-    src: url('./client/public/fonts/Poppins-Regular.ttf') format('truetype');
-  }
+  
 
   /* Gray */
   --color-gray-0: #474548;
@@ -24,6 +21,7 @@ const GlobalStyles = createGlobalStyle`
 
   /* White */
   --color-white-0: #fbfbfb;
+  --color-white-1: rgba(255, 243, 239, 0.2);
 
   /* Red */
   --color-red-0: #EB1E25;

@@ -24,7 +24,6 @@ const SystemFullName = styled.div`
     position: relative;
     top: 200px;
     text-align: center;
-    font-family: Poppins;
 `;
 
 const LoginFormLayout = styled.main`
