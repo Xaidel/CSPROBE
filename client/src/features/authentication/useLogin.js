@@ -9,7 +9,7 @@ export function useLogin(){
     const navigate = useNavigate();
     const { mutate: login, isPending } = useMutation({
         mutationFn: async ({ userID, password}) => {
-            const  user  = await client.login(userID, password);
+            const  user = await client.login(userID, password);
             return user;
         },
         onSettled: (user) => {

@@ -58,7 +58,7 @@ const MainNav: React.FC = () => {
     <nav>
       <NavList>
         <li>
-          <StyledNavLink to="/programs">
+          <StyledNavLink to="/programs/program-offerings">
             <PiSquaresFourBold />
             <span>Programs</span>
           </StyledNavLink>

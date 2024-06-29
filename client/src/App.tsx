@@ -13,6 +13,8 @@ import AppLayout from "./components/AppLayout";
 import Programs from "./pages/Programs";
 import CurriculumData from "./pages/CurriculumData";
 import StudentPortfolio from "./pages/StudentPortfolio";
+import SelectedProgram from "./pages/SelectedProgram";
+import ProgramOfferings from "./pages/ProgramOfferings";
 
 
 function App() {
@@ -47,7 +49,10 @@ function App() {
             }
           >
           <Route index element={<Navigate replace to="programs"/>}/>
-          <Route element={<Programs/>} path="programs"/>
+          <Route element={<Programs/>} path="programs">
+            <Route element={<ProgramOfferings/>} path="program-offerings"/>
+            <Route element={<SelectedProgram/>} path="program-offerings/:program_code"/>
+          </Route>
           <Route element={<CurriculumData/>} path="curriculum-data"/>
           <Route element={<StudentPortfolio/>} path="student-portfolio"/>
           

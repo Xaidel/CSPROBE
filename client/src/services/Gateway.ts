@@ -1,5 +1,5 @@
 import APIClient from "probeclient";
-
-const client = new APIClient("http://127.0.0.1:8000/api/v1");
+console.log(import.meta.env.VITE_BACKEND_BASE_URL);
+const client = new APIClient(import.meta.env.VITE_BACKEND_BASE_URL);
 
 export default client;

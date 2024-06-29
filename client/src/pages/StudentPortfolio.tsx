@@ -16,8 +16,6 @@ const StudentPortfolio:React.FC = () => {
             <Row>
                 <ICantBreathe/>
                 <StudentPortfolioHeader/>
-            </Row>
-            <Row>
                 <PortfolioHR/>
             </Row>
         </>

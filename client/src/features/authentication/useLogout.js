@@ -14,7 +14,6 @@ export function useLogout(){
         },
         onSettled: () => {
             queryClient.clear();
-            console.log(queryClient.getQueryData('api-token'));
             navigate("/login");
         }
     });

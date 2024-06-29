@@ -15,8 +15,6 @@ const CurriculumData:React.FC = () => {
             <Row>
                 <ICantBreathe/>
                 <CurriculumsDataHeader/>
-            </Row>
-            <Row>
                 <CurriculumsHR/>
             </Row>
         </>

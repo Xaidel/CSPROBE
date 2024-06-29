@@ -1,7 +1,7 @@
 import { useQueryClient } from "@tanstack/react-query";
 import Heading from "../../components/Heading";
 
-function ProgramsHeader() {
+function ProgramsHeader(): JSX.Element | undefined {
   const queryClient = useQueryClient();
   const currentUser = queryClient.getQueryData(["current-user"]);
 
