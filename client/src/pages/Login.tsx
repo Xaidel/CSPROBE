@@ -7,6 +7,7 @@ const LoginLayout = styled.main`
     grid-template-columns: 1fr 1fr;
     align-content: center;
     justify-content: center;
+    min-height: 100vh;
 `;
 
 const LoginTitle = styled.div`

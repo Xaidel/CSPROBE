@@ -1,28 +1,35 @@
 ###
-GET http://127.0.0.1:8000/api/v1/program-outcome
-Authorization: Bearer 95|jSBzK1UlCGcRTkmZWftJlHqs35VeJv3sEPdKScRu567a851d
+GET http://127.0.0.1:8000/api/v1/program-outcome/1
+Authorization: Bearer 1|FtkcTl3Tnjqc06pCco80ZkNZaLBYmq54wNyzu8rC704da551
+Accept: application/json
+
+###
+GET http://127.0.0.1:8000/api/v1/program-outcome-progCode/BSIT
+Authorization: Bearer 1|FtkcTl3Tnjqc06pCco80ZkNZaLBYmq54wNyzu8rC704da551
 Accept: application/json
 
 ###
 POST http://127.0.0.1:8000/api/v1/program-outcome
-Authorization: Bearer 8|B0bvM8Y97WCiCq8UGorntn8FYIuGe4vP5k3uF0th7b241fcf
+Authorization: Bearer 1|FtkcTl3Tnjqc06pCco80ZkNZaLBYmq54wNyzu8rC704da551
 content-type: application/json
 Accept: application/json
 
 {
-    "po_desc" : "Program Test",
-    "program_id": 1
+    "po_desc" : "First Second Third Outcomes BSCS",
+    "program_id": 2,
+    "seq_num" : 3
 }
 
 ###
-PUT http://127.0.0.1:8000/api/v1/program-outcome/2
-Authorization: Bearer 1|u4TwxCCPOZ60JzUdZlmd2PXQK2O6xj8ikpxOD6Q2bd842a5d
+PUT http://127.0.0.1:8000/api/v1/program-outcome/1
+Authorization: Bearer 1|FtkcTl3Tnjqc06pCco80ZkNZaLBYmq54wNyzu8rC704da551
 content-type: application/json
 Accept: application/json
 
 {
-    "po_desc": "Program Test",
-    "program_id": 2
+    "po_desc": "This is the first Program Outcomes",
+    "program_id": 1,
+    "seq_num" : 1
 }
 
 ###

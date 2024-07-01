@@ -43,7 +43,6 @@ const Heading = styled.h1`
     `}
     
   line-height: 1.4;
-  font-family: 'Poppins';
 `;
 
 export default Heading;

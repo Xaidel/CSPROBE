@@ -15,6 +15,8 @@ import CurriculumData from "./pages/CurriculumData";
 import StudentPortfolio from "./pages/StudentPortfolio";
 import SelectedProgram from "./pages/SelectedProgram";
 import ProgramOfferings from "./pages/ProgramOfferings";
+import ProgramOutcomes from "./pages/ProgramOutcomes";
+import Tagging from "./pages/Tagging";
 
 
 function App() {
@@ -29,7 +31,7 @@ function App() {
   });
 
   const persister = createSyncStoragePersister({
-    storage: sessionStorage,
+    storage: window.sessionStorage,
   });
 
   return (
@@ -37,8 +39,8 @@ function App() {
       client={queryClient}
       persistOptions={{persister}}
     >
-      <ReactQueryDevtools initialIsOpen={false}/>
       <GlobalStyles/>
+      <ReactQueryDevtools initialIsOpen={false}/>
        <BrowserRouter>
         <Routes>
           <Route
@@ -51,11 +53,13 @@ function App() {
           <Route index element={<Navigate replace to="programs"/>}/>
           <Route element={<Programs/>} path="programs">
             <Route element={<ProgramOfferings/>} path="program-offerings"/>
-            <Route element={<SelectedProgram/>} path="program-offerings/:program_code"/>
+            <Route element={<SelectedProgram/>} path="program-offerings/:program_code">
+              <Route element={<ProgramOutcomes/>} path="program-outcomes"/>
+              <Route element={<Tagging/>} path="csprobe-tagging"/>
+            </Route>
           </Route>
           <Route element={<CurriculumData/>} path="curriculum-data"/>
           <Route element={<StudentPortfolio/>} path="student-portfolio"/>
-          
           </Route>
           
           <Route path="login" element={<Login />}/>

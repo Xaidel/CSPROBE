@@ -5,7 +5,6 @@ namespace App\Http\Controllers\v1;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AssignRoleRequest;
 use App\Models\Role;
-use App\Models\UserRole;
 use App\Services\GetUserRole;
 use App\Models\User;
 

@@ -24,7 +24,8 @@ class ProgramOutcomeRequest extends FormRequest
     {
         return [
             'po_desc' => 'required|string|max:1000',
-            'program_id' => 'required|integer'
+            'program_id' => 'required|integer',
+            'seq_num' => 'required|integer'
         ];
     }
 }

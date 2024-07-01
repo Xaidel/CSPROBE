@@ -17,6 +17,7 @@ class ProgramOutcomeResource extends JsonResource
         return [
             'id' => $this->id,
             'po_desc' => $this->po_desc,
+            'seq_num' => $this->seq_num,
             'program' => new ProgramResource($this->whenLoaded('program')),
             'performance_indicators' => PerformanceIndicatorResource::collection($this->whenLoaded('performance_indicators'))
         ];

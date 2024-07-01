@@ -1,12 +1,12 @@
 ###
-GET http://127.0.0.1:8000/api/v1/department
+GET http://127.0.0.1:8000/api/v1/department/CCS
 Accept: application/json
-Authorization: Bearer 1|g3fZFXDy9H0syf4NhUKZpmGtzAFi1Dy0MytPFH5P32cc1df7
+Authorization: Bearer 405|ZDCD3IHIKYbhhyMQA9PEQrMbMc84ex3HMSQLZVTMba9a49ae
 
 ###
 POST http://127.0.0.1:8000/api/v1/department
 content-type: application/json
-Authorization: Bearer 1|F1qPsxzHNkR6zzI2Qt9YCicFWGYzSe6jygRcv4qWf5bc2daf
+Authorization: Bearer 405|ZDCD3IHIKYbhhyMQA9PEQrMbMc84ex3HMSQLZVTMba9a49ae
 Accept: application/json
 
 {

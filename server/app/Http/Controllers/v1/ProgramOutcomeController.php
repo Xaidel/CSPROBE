@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ProgramOutcomeRequest;
 use App\Http\Resources\ProgramOutcomeResource;
 use App\Models\ProgramOutcome;
+use App\Models\Program;
 use Illuminate\Http\Request;
 
 class ProgramOutcomeController extends Controller
@@ -68,6 +69,13 @@ class ProgramOutcomeController extends Controller
         return ProgramOutcomeResource::make($programOutcome);
     }
 
+    public function showByProgramCode(string $programCode)
+    {
+        $program = Program::firstWhere('program_code', $programCode);
+        $programOutcome = ProgramOutcome::where('program_id', $program->id)->get();
+        return ProgramOutcomeResource::collection($programOutcome);
+    }
+
     /**
      * Update the specified resource in storage.
      */
@@ -76,6 +84,7 @@ class ProgramOutcomeController extends Controller
         $programOutcome = ProgramOutcome::find($id);
         $newPoDesc = $request->input('po_desc');
         $newPOID = $request->input('program_id');
+        $newSeqNum = $request->input('seq_num');
 
         if (!$programOutcome) {
             return response([
@@ -85,6 +94,7 @@ class ProgramOutcomeController extends Controller
 
         $programOutcome->po_desc = $newPoDesc;
         $programOutcome->program_id = $newPOID;
+        $programOutcome->seq_num = $newSeqNum;
         $programOutcome->update();
 
         return ProgramOutcomeResource::make($programOutcome);

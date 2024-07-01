@@ -13,6 +13,7 @@ return new class extends Migration {
         Schema::create('program_outcome', function (Blueprint $table) {
             $table->id();
             $table->string('po_desc');
+            $table->integer('seq_num');
             $table->timestamps();
         });
     }

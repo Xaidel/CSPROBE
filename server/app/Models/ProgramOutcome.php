@@ -15,7 +15,8 @@ class ProgramOutcome extends Model
 
     protected $fillable = [
         'po_desc',
-        'program_id'
+        'program_id',
+        'seq_num'
     ];
 
     public function program(): BelongsTo

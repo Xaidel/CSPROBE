@@ -1,28 +1,41 @@
+import { IoArrowBackCircleOutline } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
+import { useSelectedProgram } from "./useSelectedProgram";
+
 import styled from "styled-components";
 import Row from "../../components/Row";
 import Heading from "../../components/Heading";
-import { useSelectedProgram } from "./useSelectedProgram";
 import Spinner from "../../components/Spinner";
 
-const ProgramsHR = styled.hr`
-  border: 0.5px solid var(--color-gray-0);
-  width: 100%;
-`;
+import SelectedProgramNav from "../../components/SelectedProgramNav";
+
 const ICantBreathe = styled.div`
-  margin: 1rem 0rem;
+  font-size: 3.5rem;
+  & svg:hover {
+    color: var(--color-orange-0);
+  }
 `;
 
 function SelectedProgramHeader() {
   const { isLoading, selectedProgram } = useSelectedProgram();
+  const navigate = useNavigate();
 
   if (isLoading) return <Spinner />;
+
+  const handleBack = () => {
+    navigate("/programs/program-offerings");
+  };
 
   return (
     <>
       <Row>
-        <ICantBreathe />
-        <Heading as="h1">{selectedProgram.program_description}</Heading>
-        <ProgramsHR />
+        <ICantBreathe>
+          <IoArrowBackCircleOutline onClick={handleBack} />
+        </ICantBreathe>
+        <Heading as="h1">
+          {selectedProgram.program_description.toUpperCase()}
+        </Heading>
+        <SelectedProgramNav />
       </Row>
     </>
   );

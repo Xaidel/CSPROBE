@@ -1,14 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { useQueryClient } from "@tanstack/react-query";
+import { useAuthenticate } from "../features/authentication/useAuthenticate";
 
 function ProtectedRoute({ children }) {
-  const queryClient = useQueryClient();
   const navigate = useNavigate();
 
-  const queryCache = queryClient.getQueryCache();
-  const query = queryCache.find({ queryKey: ["current-user"] });
-  const authenticatedUser = query?.state?.data;
+  const { authenticatedUser } = useAuthenticate();
+
   useEffect(
     function () {
       if (!authenticatedUser) navigate("/login");

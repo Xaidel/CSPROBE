@@ -102,12 +102,14 @@ class DatabaseSeeder extends Seeder
 
         ProgramOutcome::create([
             'po_desc' => 'This is the first Program Outcomes',
-            'program_id' => 1
+            'program_id' => 1,
+            'seq_num' => 2
         ]);
 
         ProgramOutcome::create([
             'po_desc' => 'This is the second Program Outcomes',
-            'program_id' => 1
+            'program_id' => 1,
+            'seq_num' => 2
         ]);
 
         PEO::create([

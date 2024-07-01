@@ -1,22 +1,23 @@
-###
+    ###
 GET http://127.0.0.1:8000/api/v1/program 
 Accept: application/json
-Authorization: Bearer 93|4VPvBEJO4NKyT8aJkVIjF8cLpVMh24J49E99jI1n0b76e254
+Authorization: Bearer 405|ZDCD3IHIKYbhhyMQA9PEQrMbMc84ex3HMSQLZVTMba9a49ae
 
+###
 POST http://127.0.0.1:8000/api/v1/program
 content-type: application/json
-Authorization: Bearer 1|UAFLiQDR6S769yVDiyKMkXPXYL5m4SpzV0RExqHidfd24429
+Authorization: Bearer 427|uCJiCLDXYWVpBtCu0PqmOpVkXEg3HkN7u6ktj4We012b8e28
 Accept: application/json
 
 {
-    "program_code" : "BSCS",
-    "program_description" : "Bachelor of Science in Computer Science",
+    "program_code" : "BSCE",
+    "program_description" : "Bachelor of Science in Computer Engineeering",
     "department_id" : 1
 }
 
 ###
 PUT http://127.0.0.1:8000/api/v1/program/
-content-type: application/json
+content-type: application/jsons
 Authorization: Bearer 37|5szRufJt119PDMp7RMqPKPHFEEJ2z6S0J5HGoroR8674f8fe
 Accept: application/json
 
@@ -27,6 +28,6 @@ Accept: application/json
 }
 
 ###
-DELETE http://127.0.0.1:8000/api/v1/program/BSIT
+DELETE http://127.0.0.1:8000/api/v1/program/BSCE
 Accept: application/json
-Authorization: Bearer 37|5szRufJt119PDMp7RMqPKPHFEEJ2z6S0J5HGoroR8674f8fe
+Authorization: Bearer 427|uCJiCLDXYWVpBtCu0PqmOpVkXEg3HkN7u6ktj4We012b8e28

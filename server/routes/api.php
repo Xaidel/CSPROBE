@@ -24,6 +24,7 @@ Route::prefix('v1')->group(function () {
     Route::apiResource('/program', ProgramController::class)->middleware('auth:sanctum');
     Route::post('assign-role', AssignRoleController::class)->middleware(['auth:sanctum', 'isdean']);
     Route::apiResource('/program-outcome', ProgramOutcomeController::class)->middleware(['auth:sanctum', 'isprogramhead']);
+    Route::get('/program-outcome-progCode/{program_code}', [ProgramOutcomeController::class, "showByProgramCode"])->middleware(['auth:sanctum', 'isprogramhead']);
     Route::apiResource('peo', PEOController::class)->middleware(["auth:sanctum", 'isprogramhead']);
     Route::apiResource('performance-indicator', PerformanceIndicatorController::class)->middleware(['auth:sanctum', 'isprogramhead']);
     Route::apiResource('/course', CourseController::class)->middleware(['auth:sanctum', 'isprogramhead']);
