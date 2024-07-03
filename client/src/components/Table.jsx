@@ -7,12 +7,38 @@ const StyledTable = styled.div`
   border: 1px solid var(--color-gray-0);
   margin-top: 2rem;
   font-size: 1.4rem;
+  max-height: 50rem;
   background-color: var(--color-grey-0);
   overflow: hidden;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 `;
 
 const StyledEmpty = styled.div`
   padding: 1rem;
+  min-height: 40rem;
+  max-height: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const CommonRow = styled.div`
@@ -25,7 +51,8 @@ const CommonRow = styled.div`
 
 const StyledHeader = styled(CommonRow)`
   padding: 1.2rem 2.4rem;
-  position: relative;
+  position: sticky;
+  top: 0;
 
   background-color: var(--color-gray-4);
   text-transform: uppercase;

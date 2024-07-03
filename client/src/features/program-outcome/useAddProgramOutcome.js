@@ -16,9 +16,6 @@ export function useAddProgramOutcome(){
             sequenceNum++;
            await client.ProgramOutcomes().create(token, poDesc, progID, seqNum);
         },
-        onSuccess:()=> {
-            queryClient.invalidateQueries({queryKey: [`program-outcome-${program_code}`]});
-        },
         onError: (error) => {
             console.log(error);
         }

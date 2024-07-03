@@ -10,9 +10,13 @@ import { useForm } from "react-hook-form";
 import { useAddProgramOutcome } from "./useAddProgramOutcome";
 import { useState } from "react";
 import { useDeleteProgramOutcome } from "./useDeleteProgramOutcome";
+import { useQueryClient } from "@tanstack/react-query";
+import { useParams } from "react-router-dom";
 
 function UploadProgramOutcomeForm({ onCloseModal }) {
   const [parsedData, setParsedData] = useState([]);
+  const queryClient = useQueryClient();
+  const { program_code } = useParams();
   const { addProgramOutcome, isCreating } = useAddProgramOutcome();
   const { deleteProgramOutcome } = useDeleteProgramOutcome();
   const { register, handleSubmit, reset } = useForm({
@@ -30,7 +34,7 @@ function UploadProgramOutcomeForm({ onCloseModal }) {
   };
 
   function onSubmit() {
-    const toastID = toast.loading("Uploading...");
+    const toastID = toast.loading("Parsing Data, Please wait...");
     deleteProgramOutcome();
     parsedData.map((programOutcome) => {
       addProgramOutcome(
@@ -39,6 +43,9 @@ function UploadProgramOutcomeForm({ onCloseModal }) {
           onSuccess: () => {
             toast.dismiss(toastID);
             toast.success("Program Outcomes Successfully Added");
+            queryClient.invalidateQueries({
+              queryKey: [`program-outcome-${program_code}`],
+            });
             reset();
             onCloseModal();
           },
