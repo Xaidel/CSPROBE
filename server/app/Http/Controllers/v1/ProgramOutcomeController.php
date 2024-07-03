@@ -35,12 +35,6 @@ class ProgramOutcomeController extends Controller
     public function store(ProgramOutcomeRequest $request)
     {
         $validProgramOutcome = $request->validated();
-        $existingProgramOutcome = ProgramOutcome::firstWhere('po_desc', $validProgramOutcome['po_desc']);
-
-        if ($existingProgramOutcome) {
-            return ProgramOutcomeResource::make($existingProgramOutcome);
-        }
-
         $newProgramOutcome = ProgramOutcome::create($validProgramOutcome);
         return ProgramOutcomeResource::make($newProgramOutcome);
 
@@ -105,8 +99,7 @@ class ProgramOutcomeController extends Controller
      */
     public function destroy(string $id)
     {
-        $programOutcome = ProgramOutcome::find($id);
-        $programOutcome->delete();
+        ProgramOutcome::where('program_id', $id)->delete();
         return response()->noContent();
     }
 }

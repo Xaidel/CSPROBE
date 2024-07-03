@@ -14,7 +14,7 @@ export function useProgramOutcome(){
     } = useQuery({
         queryKey: [`program-outcome-${program_code}`],
         queryFn: async () => {
-            const res = await client.ProgramOutcomes().get(token, program_code);
+            const res = await client.ProgramOutcomes().read(token, program_code);
             const { data } = res;
             return data;
         }

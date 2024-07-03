@@ -7,6 +7,7 @@ function ProgramOutcomeTable() {
   const { isLoading, programOutcome } = useProgramOutcome();
 
   if (isLoading) return <Spinner />;
+
   return (
     <Table columns={"1fr 4fr"}>
       <Table.Header>

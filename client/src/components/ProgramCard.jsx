@@ -32,7 +32,6 @@ function ProgramCard({ program }) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    console.log(`/programs/program-offerings/${program.program_code}`);
     navigate(`/programs/program-offerings/${program.program_code}`);
   };
 

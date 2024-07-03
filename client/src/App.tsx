@@ -71,6 +71,13 @@ function App() {
   gutter={12}
   containerStyle={{margin: "10px"}}
   toastOptions={{
+
+    loading: {
+      style: {
+        backgroundColor: "var(--color-gray-3)",
+        color: "var(--color-white-0)",
+      }
+    },
     success: {
       duration: 3000,
       style: {

@@ -5,12 +5,12 @@ Accept: application/json
 
 ###
 GET http://127.0.0.1:8000/api/v1/program-outcome-progCode/BSIT
-Authorization: Bearer 1|FtkcTl3Tnjqc06pCco80ZkNZaLBYmq54wNyzu8rC704da551
+Authorization: Bearer 7|MezYetxmKfNWfXQwcCTO0r9kziLie7SHeSAH2she8ff33957
 Accept: application/json
 
 ###
 POST http://127.0.0.1:8000/api/v1/program-outcome
-Authorization: Bearer 1|FtkcTl3Tnjqc06pCco80ZkNZaLBYmq54wNyzu8rC704da551
+Authorization: Bearer 7|MezYetxmKfNWfXQwcCTO0r9kziLie7SHeSAH2she8ff33957
 content-type: application/json
 Accept: application/json
 
@@ -34,5 +34,5 @@ Accept: application/json
 
 ###
 DELETE http://127.0.0.1:8000/api/v1/program-outcome/1
-Authorization: Bearer 7|em3EZnxSEUVgcSqsSEn8gPQzxtv2AGg8gfil7d58a97c328d
+Authorization: Bearer 6|iNpDobU0SXjFpQf5mBh617lmFtD58v0mm6cuegzh8c8344ee
 Accept: application/json
